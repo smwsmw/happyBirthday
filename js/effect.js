@@ -37,6 +37,11 @@ $('document').ready(function () {
     });
 
     var audio; vw = $(window).width() / 2;
+    var audio1 = $('.song1')[0];
+    var audio2 = $('.song2')[0];
+var audio3 = $('.song3')[0];
+var audio4 = $('.song4')[0];
+var audio5 = $('.song5')[0];
     console.log(vw,$(window).width());
     var time = 5000;
     $('#play').click(function () {
@@ -55,7 +60,6 @@ $('document').ready(function () {
         });
     });
     $('#play2').click(function () {
-        var audio1 = $('.song1')[0];
         audio.pause();
         audio1.play();
         $(this).fadeOut('slow').delay(time).promise().done(function () {
@@ -181,12 +185,43 @@ $('document').ready(function () {
         $('.balloons').css('opacity', '0.9');
         $('.balloons h2').fadeIn(3000);
         $(this).fadeOut('slow').delay(3000).promise().done(function () {
-            $('#story').fadeIn('slow');
+            $('#yi').fadeIn('slow');
         });
     });
 
-    $('#story').click(function () {
+    $('#yi').click(function () {
+        audio1.pause();
+        audio2.play();
+        $(this).fadeOut('slow').delay(time).promise().done(function () {
+            $('#er').fadeIn('slow');
+        });
+    });
+    $('#er').click(function () {
+        audio2.pause();
+        audio3.play();
+        $(this).fadeOut('slow').delay(time).promise().done(function () {
+            $('#san').fadeIn('slow');
+        });
+    });
+    $('#san').click(function () {
+        audio3.pause();
+        audio4.play();
+        $(this).fadeOut('slow').delay(time).promise().done(function () {
+            $('#si').fadeIn('slow');
+        });
+    });
+  $('#si').click(function () {
+        audio4.pause();
+        audio5.play();
+        $(this).fadeOut('slow').delay(time).promise().done(function () {
+            $('#zhufu').fadeIn('slow');
+        });
+    });
+
+    $('#zhufu').click(function () {
         $(this).fadeOut('slow');
+       audio5.pause();
+        audio1.play();
         $('.cake').fadeOut('fast').promise().done(function () {
             $('.message').fadeIn('slow');
         });
